@@ -11,7 +11,6 @@
 		
 		function Start() 
 		{	
-			
       $("c").clearCanvas();
       var stage = new Stage("c");
 			stage.addEventListener(Event.ENTER_FRAME, onEF);
@@ -60,6 +59,8 @@
 			// both images are 200 x 200 px
 			var bxBD = new BitmapData("chocolatebar.png");
 			var blBD = new BitmapData("cakepop1.png");
+      bxBD.globalAlpha=0.5;
+      blBD.globalAlpha=0.5;
 			
 			// let's add 25 boxes and 25 balls!
 			bodyDef.type = b2Body.b2_dynamicBody;
@@ -120,6 +121,13 @@
       location.reload();
 		});
 	</script>
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0"></head>
-<body style="margin:0"><canvas id="c" width="839" height="522" style="width: 839px; height: 522px; cursor: default;"></canvas>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+<style>
+  canvas {
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body style="margin:0">
+<canvas id="c" style="cursor: default"></canvas>
 </body></html>
